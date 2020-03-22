@@ -21,26 +21,8 @@ const { logCall, logReturn } = require('./utils/logging');
  * binarySearch(arr, 66); // false
  */
 const binarySearch = (arr, n) => {
-  // base case: arr is length 1
-  if (arr.length === 1) {
-    return arr[0] === n;
-  }
-
-  // check the midpoint of the array; return true if found
-  const mid = Math.trunc(arr.length / 2);
-  if (arr[mid] === n) {
-    return true;
-  }
-
-  // recurse with divide and conquer:
-  // call binarySearch on either the right or left half
-  if (n < arr[mid]) {
-    const leftHalf = arr.slice(0, mid);
-    return binarySearch(leftHalf, n);
-  } else {
-    const rightHalf = arr.slice(mid, arr.length);
-    return binarySearch(rightHalf, n);
-  }
+  // base case
+  // recurse
 };
 
 const arr = [3, 5, 6, 8, 9, 11, 13, 24, 33, 45, 57, 80, 99, 131, 333, 500];

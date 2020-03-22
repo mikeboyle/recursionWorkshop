@@ -10,21 +10,6 @@ const { logCall, logReturn } = require('./utils/logging');
  * pow(2, 7); // 2^7 = 128
  * pow(10, 0); // 10^0 = 1
  */
-const pow = (base, exp) => {
-  logCall(pow, base, exp);
-  // base cases
-  if (exp === 0) {
-    logReturn(pow, 1, base, exp);
-    return 1;
-  }
-  if (exp === 1) {
-    logReturn(pow, base, base, exp);
-    return base;
-  }
-  // recurse to base case
-  const res = base * pow(base, exp - 1);
-  logReturn(pow, res, base, exp);
-  return res;
-};
+const pow = (base, exp) => {};
 
 pow(2, 7);

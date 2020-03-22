@@ -15,24 +15,7 @@ const { logCall, logReturn } = require('./utils/logging');
  *
  * Hint: Is this very different from intToString()?
  */
-const intToBinary = n => {
-  logCall(intToBinary, n);
-  // We use this array to convert single digits to strings
-  const intToBinaryStringMap = ['0', '1'];
-
-  // base case: a one-digit number
-  if (n < 2) {
-    logReturn(intToBinary, intToBinaryStringMap[n]);
-    return intToBinaryStringMap[n];
-  }
-
-  // Remove last digit and recurse to base case
-  const firstDigits = Math.trunc(n / 2);
-  const lastDigit = n % 2;
-  const res = intToBinary(firstDigits) + intToBinary(lastDigit);
-  logReturn(intToBinary, res, n);
-  return res;
-};
+const intToBinary = n => {};
 
 console.log(intToBinary(1)); // "1"
 console.log(intToBinary(2)); // "10"
